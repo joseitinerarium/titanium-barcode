@@ -14,7 +14,7 @@ window.open();
 
 var titaniumBarcode = require('com.mwaysolutions.barcode');
 
-Titanium.Barcode.scan({
+titaniumBarcode.scan({
   success:function(data) {
     if(data && data.barcode) {
       var label = Titanium.UI.createLabel({
@@ -23,7 +23,7 @@ Titanium.Barcode.scan({
         width:'auto'
       });
 
-      win.add(label);
+      window.add(label);
     } else {
       alert(JSON.stringify(data));
     }
@@ -38,3 +38,4 @@ Titanium.Barcode.scan({
   }
 });
 
+window.open();
